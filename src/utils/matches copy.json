@@ -1,0 +1,480 @@
+[
+    {
+        "id": 1,
+        "torneo_id": 1,
+        "torneo": "Copa América 2021",
+        "instancia": "Fase de grupos",
+        "fecha": "14/06/2021",
+        "vs": "Chile",
+        "banderavs": "",
+        "localia": "L",
+        "resultado": "1-1",
+        "goles": {
+            "local": [
+                {
+                    "autor": "Lionel Messi",
+                    "minuto": 33,
+                    "asistencia": "",
+                    "situacion": "Tiro Libre"
+                }
+            ],
+            "visitante": [
+                {
+                    "autor": "Eduardo Vargas",
+                    "minuto": 57,
+                    "asistencia": "",
+                    "situacion": "Jugada"
+                }
+            ]
+        },
+        "video": "https://www.youtube.com/watch?v=TY5xn30_O7I"
+    },{
+        "id": 2,
+        "torneo_id": 1,
+        "torneo": "Copa América 2021",
+        "instancia": "Fase de grupos",
+        "fecha": "18/06/2021",
+        "vs": "Uruguay",
+        "banderavs": "",
+        "localia": "L",
+        "resultado": "1-0",
+        "goles": {
+            "local": [
+                {
+                    "autor": "Guido Rodríguez",
+                    "minuto": 13,
+                    "asistencia": "Lionel Messi",
+                    "situacion": "Jugada"
+                }
+            ],
+            "visitante": [{}]
+        },
+        "video": "https://www.youtube.com/watch?v=C2-nakU6_IM"
+    },{
+        "id": 3,
+        "torneo_id": 1,
+        "torneo": "Copa América 2021",
+        "instancia": "Fase de grupos",
+        "fecha": "21/06/2021",
+        "vs": "Paraguay",
+        "banderavs": "",
+        "localia": "L",
+        "resultado": "1-0",
+        "goles": {
+            "local": [
+                {
+                    "autor": "Alejandro Darío Gómez",
+                    "minuto": 10,
+                    "asistencia": "Ángel Di María",
+                    "situacion": "Jugada"
+                }
+            ],
+            "visitante": [{}]
+        },
+        "video": "https://www.youtube.com/watch?v=CAg5s9BeoQM"
+    },{
+        "id": 4,
+        "torneo_id": 1,
+        "torneo": "Copa América 2021",
+        "instancia": "Fase de grupos",
+        "fecha": "28/06/2021",
+        "vs": "Bolivia",
+        "banderavs": "",
+        "localia": "V",
+        "resultado": "1-4",
+        "goles": {
+            "local": [{
+                "autor": "Erwin Saavedra",
+                "minuto": 60,
+                "asistencia": "Leonel Justiniano",
+                "situacion": "Jugada"
+            }],
+            "visitante": [
+                {
+                    "autor": "Alejandro Darío Gómez",
+                    "minuto": 6,
+                    "asistencia": "Lionel Messi",
+                    "situacion": "Jugada"
+                },{
+                    "autor": "Lionel Messi",
+                    "minuto": 33,
+                    "asistencia": "",
+                    "situacion": "Penal"
+                },{
+                    "autor": "Lionel Messi",
+                    "minuto": 42,
+                    "asistencia": "Segio Aguero",
+                    "situacion": "Jugada"
+                },{
+                    "autor": "Lautaro Martínez",
+                    "minuto": 65,
+                    "asistencia": "",
+                    "situacion": "Jugada"
+                }
+            ]
+        },
+        "video": "https://www.youtube.com/watch?v=PXI1xMvUyrA"
+    },{
+        "id": 5,
+        "torneo_id": 1,
+        "torneo": "Copa América 2021",
+        "instancia": "Cuartos de Final",
+        "fecha": "03/07/2021",
+        "vs": "Ecuador",
+        "banderavs": "",
+        "localia": "L",
+        "resultado": "3-0",
+        "goles": {
+            "local": [
+                {
+                    "autor": "Rodrigo De Paul",
+                    "minuto": 40,
+                    "asistencia": "Lionel Messi",
+                    "situacion": "Jugada"
+                },{
+                    "autor": "Lautaro Martínez",
+                    "minuto": 84,
+                    "asistencia": "Lionel Messi",
+                    "situacion": "Jugada"
+                },{
+                    "autor": "Lionel Messi",
+                    "minuto": 93,
+                    "asistencia": "",
+                    "situacion": "Tiro Libre"
+                }
+            ],
+            "visitante": [{}]
+        },
+        "video": "https://www.youtube.com/watch?v=WNm1A3Nme70"
+    },{
+        "id": 6,
+        "torneo_id": 1,
+        "torneo": "Copa América 2021",
+        "instancia": "Semifinal",
+        "fecha": "06/07/2021",
+        "vs": "Colombia",
+        "banderavs": "",
+        "localia": "L",
+        "resultado": "1(3)-1(2)",
+        "goles": {
+            "local": [
+                {
+                    "autor": "Lautaro Martínez",
+                    "minuto": 7,
+                    "asistencia": "Lionel Messi",
+                    "situacion": "Jugada"
+                }
+            ],
+            "visitante": [
+                {
+                    "autor": "Luis Fernando Díaz",
+                    "minuto": 61,
+                    "asistencia": "Edwin Cardona",
+                    "situacion": "Jugada"
+                }
+            ]
+        },
+        "video": "https://www.youtube.com/watch?v=R1yBnP38U_M"
+    },{
+        "id": 7,
+        "torneo_id": 1,
+        "torneo": "Copa América 2021",
+        "instancia": "Final",
+        "fecha": "10/07/2021",
+        "vs": "Brasil",
+        "banderavs": "",
+        "localia": "L",
+        "resultado": "1-0",
+        "goles": {
+            "local": [
+                {
+                    "autor": "Ángel Di María",
+                    "minuto": 22,
+                    "asistencia": "Rodrigo De Paul",
+                    "situacion": "Jugada"
+                }
+            ],
+            "visitante": [{}]
+        },
+        "video": "https://www.youtube.com/watch?v=pU89OpwBgOc"
+    },
+    
+    {
+        "id": 8,
+        "torneo_id": 2,
+        "torneo": "Finalissima",
+        "instancia": "Final",
+        "fecha": "01/06/2022",
+        "vs": "Italia",
+        "banderavs": "",
+        "localia": "L",
+        "resultado": "3-0",
+        "goles": {
+            "local": [
+                {
+                    "autor": "Lautaro Martínez",
+                    "minuto": 28,
+                    "asistencia": "Lionel Messi",
+                    "situacion": "Jugada"
+                },{
+                    "autor": "Ángel Di María",
+                    "minuto": 46,
+                    "asistencia": "Lautaro Martínez",
+                    "situacion": "Jugada"
+                },{
+                    "autor": "Paulo Dybala",
+                    "minuto": 94,
+                    "asistencia": "Lionel Messi",
+                    "situacion": "Jugada"
+                }
+            ],
+            "visitante": [{}]
+        },
+        "video": "https://www.youtube.com/watch?v=XjAn72eve1E"
+    },
+    
+    
+    {
+        "id": 9,
+        "torneo_id": 3,
+        "torneo": "Copa Mundial Qatar 2022",
+        "instancia": "Fase de grupos",
+        "fecha": "22/11/2022",
+        "vs": "Arabia Saudita",
+        "banderavs": "",
+        "localia": "L",
+        "resultado": "1-2",
+        "goles": {
+            "local": [
+                {
+                    "autor": "Lionel Messi",
+                    "minuto": 10,
+                    "asistencia": "",
+                    "situacion": "Penal"
+                }
+            ],
+            "visitante": [
+                {
+                    "autor": "Saleh Al-Shehri",
+                    "minuto": 48,
+                    "asistencia": "Firas Al-Buraikan",
+                    "situacion": "Jugada"
+                },{
+                    "autor": "Salem Al-Dawsari",
+                    "minuto": 53,
+                    "asistencia": "",
+                    "situacion": "Jugada"
+                }
+            ]
+        },
+        "video": "https://www.youtube.com/watch?v=UsTQShSZPRc"
+    },{
+        "id": 10,
+        "torneo_id": 3,
+        "torneo": "Copa Mundial Qatar 2022",
+        "instancia": "Fase de grupos",
+        "fecha": "26/11/2022",
+        "vs": "México",
+        "banderavs": "",
+        "localia": "L",
+        "resultado": "2-0",
+        "goles": {
+            "local": [
+                {
+                    "autor": "Lionel Messi",
+                    "minuto": 64,
+                    "asistencia": "Ángel Di María",
+                    "situacion": "Jugada"
+                },{
+                    "autor": "Enzo Fernández",
+                    "minuto": 87,
+                    "asistencia": "Lionel Messi",
+                    "situacion": "Jugada"
+                }
+            ],
+            "visitante": [{}]
+        },
+        "video": "https://www.youtube.com/watch?v=cP35DOe47H4"
+    },{
+        "id": 11,
+        "torneo_id": 3,
+        "torneo": "Copa Mundial Qatar 2022",
+        "instancia": "Fase de grupos",
+        "fecha": "30/11/2022",
+        "vs": "Polonia",
+        "banderavs": "",
+        "localia": "V",
+        "resultado": "0-2",
+        "goles": {
+            "local": [{}],
+            "visitante": [
+                {
+                    "autor": "Alexis Mac Allister",
+                    "minuto": 46,
+                    "asistencia": "Nahuel Molina",
+                    "situacion": "Jugada"
+                },{
+                    "autor": "Julián Álvarez",
+                    "minuto": 67,
+                    "asistencia": "Enzo Fernández",
+                    "situacion": "Jugada"
+                }
+            ]
+        },
+        "video": "https://www.youtube.com/watch?v=wfwSZB9m2bM"
+    },{
+        "id": 12,
+        "torneo_id": 3,
+        "torneo": "Copa Mundial Qatar 2022",
+        "instancia": "Octavos de Final",
+        "fecha": "03/12/2022",
+        "vs": "Australia",
+        "banderavs": "",
+        "localia": "L",
+        "resultado": "2-1",
+        "goles": {
+            "local": [
+                {
+                    "autor": "Lionel Messi",
+                    "minuto": 35,
+                    "asistencia": "Nicolás Otamendi",
+                    "situacion": "Jugada"
+                },{
+                    "autor": "Julián Álvarez",
+                    "minuto": 57,
+                    "asistencia": "",
+                    "situacion": "Jugada"
+                }
+            ],
+            "visitante": [
+                {
+                    "autor": "Enzo Fernández(EC)",
+                    "minuto": 77,
+                    "asistencia": "",
+                    "situacion": "Jugada"
+                }
+            ]
+        },
+        "video": "https://www.youtube.com/watch?v=xoVj4ne_r1Q"
+    },{
+        "id": 13,
+        "torneo_id": 3,
+        "torneo": "Copa Mundial Qatar 2022",
+        "instancia": "Cuartos de Final",
+        "fecha": "09/12/2022",
+        "vs": "Países Bajos",
+        "banderavs": "",
+        "localia": "V",
+        "resultado": "2(3)-2(4)",
+        "goles": {
+            "local": [
+                {
+                    "autor": "Wout Weghorst",
+                    "minuto": 83,
+                    "asistencia": "Steven Berghuis",
+                    "situacion": "Jugada"
+                },{
+                    "autor": "Wout Weghorst",
+                    "minuto": 101,
+                    "asistencia": "",
+                    "situacion": "Jugada"
+                }
+            ],
+            "visitante": [
+                {
+                    "autor": "Nahuel Molina",
+                    "minuto": 35,
+                    "asistencia": "Lionel Messi",
+                    "situacion": "Jugada"
+                },{
+                    "autor": "Lionel Messi",
+                    "minuto": 73,
+                    "asistencia": "",
+                    "situacion": "Penal"
+                }
+            ]
+        },
+        "video": "https://www.youtube.com/watch?v=sivI7x0BuFk"
+    },{
+        "id": 14,
+        "torneo_id": 3,
+        "torneo": "Copa Mundial Qatar 2022",
+        "instancia": "Semifinal",
+        "fecha": "13/12/2022",
+        "vs": "Croacia",
+        "banderavs": "",
+        "localia": "L",
+        "resultado": "3-0",
+        "goles": {
+            "local": [
+                {
+                    "autor": "Lionel Messi",
+                    "minuto": 34,
+                    "asistencia": "",
+                    "situacion": "Penal"
+                },{
+                    "autor": "Julián Álvarez",
+                    "minuto": 39,
+                    "asistencia": "",
+                    "situacion": "Jugada"
+                },{
+                    "autor": "Julián Álvarez",
+                    "minuto": 69,
+                    "asistencia": "Lionel Messi",
+                    "situacion": "Jugada"
+                }
+            ],
+            "visitante": [{}]
+        },
+        "video": "https://www.youtube.com/watch?v=lM1bF8hD8-g"
+    },{
+        "id": 15,
+        "torneo_id": 3,
+        "torneo": "Copa Mundial Qatar 2022",
+        "instancia": "Final",
+        "fecha": "18/12/2022",
+        "vs": "Francia",
+        "banderavs": "",
+        "localia": "L",
+        "resultado": "3(4)-3(2)",
+        "goles": {
+            "local": [
+                {
+                    "autor": "Lionel Messi",
+                    "minuto": 23,
+                    "asistencia": "",
+                    "situacion": "Penal"
+                },{
+                    "autor": "Ángel Di María",
+                    "minuto": 36,
+                    "asistencia": "Alexis Mac Allister",
+                    "situacion": "Jugada"
+                },{
+                    "autor": "Lionel Messi",
+                    "minuto": 108,
+                    "asistencia": "",
+                    "situacion": "Jugada"
+                }
+            ],
+            "visitante": [
+                {
+                    "autor": "Kylian Mbappé",
+                    "minuto": 80,
+                    "asistencia": "",
+                    "situacion": "Penal"
+                },{
+                    "autor": "Kylian Mbappé",
+                    "minuto": 81,
+                    "asistencia": "Marcus Thuram",
+                    "situacion": "Jugada"
+                },{
+                    "autor": "Kylian Mbappé",
+                    "minuto": 118,
+                    "asistencia": "",
+                    "situacion": "Penal"
+                }
+            ]
+        },
+        "video": "https://www.youtube.com/watch?v=YkCz8d3xxAM"
+    }
+]

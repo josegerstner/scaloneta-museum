@@ -41,12 +41,12 @@ function Partido({partidoid, torneoid}) {
             <div className='txt-trofeo mb-3'>
                 <div className="row g-0">
                     {torneo?
-                    <div className="col col-md-4 text-center">
+                    <div className="col-sm-12 col-md-4 text-center">
                         <Link to={`/titulo/`+torneo.id}><img src={torneo.imagen} className="img-fluid rounded-start torneo-img p-3" alt={torneo.nombre} /></Link>
                     </div>
                     :''}
                 
-                    <div className="col col-md-8">
+                    <div className="col-sm-12 col-md-8">
                         <h5 className="mb-1 text-center">{partido?.instancia} - {partido?.fecha}</h5>
                         <h5 className="mb-1 text-center">{partido?.localia=='L'?"Argentina "+partido?.resultado+" "+partido?.vs:partido?.vs+" "+partido?.resultado+" Argentina"}</h5>
                         <div className="container row">

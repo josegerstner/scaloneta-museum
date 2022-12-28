@@ -8,20 +8,20 @@ function Titulos() {
     {
         "id": 1,
         "torneo": "Copa América 2021",
-        "imagen": "/public/images/competiciones/logo_CopaAmerica2021.png",
-        "trofeo": "/public/images/trofeos/trofeo_CopaAmerica.png",
+        "imagen": "/images/competiciones/logo_CopaAmerica2021.png",
+        "trofeo": "/images/trofeos/trofeo_CopaAmerica.png",
         "link": "/titulo/1"
     },{
         "id": 2,
         "torneo": "Copa de Campeones Conmebol-UEFA 2022",
-        "imagen": "/public/images/competiciones/logo_Finalissima2022.png",
-        "trofeo": "/public/images/trofeos/trofeo_Finalissima.png",
+        "imagen": "/images/competiciones/logo_Finalissima2022.png",
+        "trofeo": "/images/trofeos/trofeo_Finalissima.png",
         "link": "/titulo/2"
     },{
         "id": 3,
         "torneo": "Copa del Mundo 2022",
-        "imagen": "/public/images/competiciones/logo_WorldCup2022.png",
-        "trofeo": "/public/images/trofeos/trofeo_WorldCup.png",
+        "imagen": "/images/competiciones/logo_WorldCup2022.png",
+        "trofeo": "/images/trofeos/trofeo_WorldCup.png",
         "link": "/titulo/3"
     }
   ]

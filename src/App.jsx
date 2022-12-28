@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/partido/:id" element={<Partido/>} />
         <Route path="/titulo/:id" element={<Torneos/>} />
-        <Route exact path="/" element={<Titulos />} />
+        <Route index exact path="/" element={<Titulos />} />
       </Routes>
       <Footer />
     </Router>

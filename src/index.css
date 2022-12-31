@@ -46,9 +46,11 @@ html {
   min-height: 100%;
   position: relative;
 }
+
 body {
   padding-bottom: 3em;
 }
+
 footer {
   position: absolute;
   bottom: 0;

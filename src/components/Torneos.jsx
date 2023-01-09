@@ -13,15 +13,15 @@ function Torneos() {
     useEffect(()=>{
         const path = '/titulo/'
         const url = window.location.pathname
-        console.log(partidos);
-        console.log(url.substring(url.indexOf(path)+(path.length)))
+        // console.log(partidos);
+        // console.log(url.substring(url.indexOf(path)+(path.length)))
         setId(url.substring(url.indexOf(path)+(path.length)))
-        console.log(id);
+        // console.log(id);
     },[partidos])
 
     useEffect(()=>{
         setCurrentTorneo(torneos.filter(t=>t.id==id)[0])
-        console.log('torneo',currentTorneo)
+        // console.log('torneo',currentTorneo)
     },[id])
 
     return (

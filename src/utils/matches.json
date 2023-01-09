@@ -13,7 +13,7 @@
             "local": [
                 {
                     "autor": "Lionel Messi",
-                    "minuto": 33,
+                    "minuto": "32",
                     "asistencia": "",
                     "situacion": "Tiro Libre"
                 }
@@ -21,7 +21,7 @@
             "visitante": [
                 {
                     "autor": "Eduardo Vargas",
-                    "minuto": 57,
+                    "minuto": "57",
                     "asistencia": "",
                     "situacion": "Jugada"
                 }
@@ -42,7 +42,7 @@
             "local": [
                 {
                     "autor": "Guido Rodríguez",
-                    "minuto": 13,
+                    "minuto": "13",
                     "asistencia": "Lionel Messi",
                     "situacion": "Jugada"
                 }
@@ -64,7 +64,7 @@
             "local": [
                 {
                     "autor": "Alejandro Darío Gómez",
-                    "minuto": 10,
+                    "minuto": "10",
                     "asistencia": "Ángel Di María",
                     "situacion": "Jugada"
                 }
@@ -85,29 +85,29 @@
         "goles": {
             "local": [{
                 "autor": "Erwin Saavedra",
-                "minuto": 60,
+                "minuto": "60",
                 "asistencia": "Leonel Justiniano",
                 "situacion": "Jugada"
             }],
             "visitante": [
                 {
                     "autor": "Alejandro Darío Gómez",
-                    "minuto": 6,
+                    "minuto": "6",
                     "asistencia": "Lionel Messi",
                     "situacion": "Jugada"
                 },{
                     "autor": "Lionel Messi",
-                    "minuto": 33,
+                    "minuto": "33",
                     "asistencia": "",
                     "situacion": "Penal"
                 },{
                     "autor": "Lionel Messi",
-                    "minuto": 42,
+                    "minuto": "42",
                     "asistencia": "Segio Aguero",
                     "situacion": "Jugada"
                 },{
                     "autor": "Lautaro Martínez",
-                    "minuto": 65,
+                    "minuto": "64",
                     "asistencia": "",
                     "situacion": "Jugada"
                 }
@@ -128,17 +128,17 @@
             "local": [
                 {
                     "autor": "Rodrigo De Paul",
-                    "minuto": 40,
+                    "minuto": "40",
                     "asistencia": "Lionel Messi",
                     "situacion": "Jugada"
                 },{
                     "autor": "Lautaro Martínez",
-                    "minuto": 84,
+                    "minuto": "84",
                     "asistencia": "Lionel Messi",
                     "situacion": "Jugada"
                 },{
                     "autor": "Lionel Messi",
-                    "minuto": 93,
+                    "minuto": "90+3",
                     "asistencia": "",
                     "situacion": "Tiro Libre"
                 }
@@ -160,7 +160,7 @@
             "local": [
                 {
                     "autor": "Lautaro Martínez",
-                    "minuto": 7,
+                    "minuto": "7",
                     "asistencia": "Lionel Messi",
                     "situacion": "Jugada"
                 }
@@ -168,7 +168,7 @@
             "visitante": [
                 {
                     "autor": "Luis Fernando Díaz",
-                    "minuto": 61,
+                    "minuto": "61",
                     "asistencia": "Edwin Cardona",
                     "situacion": "Jugada"
                 }
@@ -189,7 +189,7 @@
             "local": [
                 {
                     "autor": "Ángel Di María",
-                    "minuto": 22,
+                    "minuto": "22",
                     "asistencia": "Rodrigo De Paul",
                     "situacion": "Jugada"
                 }
@@ -207,28 +207,28 @@
         "fecha": "01/06/2022",
         "vs": "Italia",
         "banderavs": "",
-        "localia": "L",
+        "localia": "V",
         "resultado": "3-0",
         "goles": {
             "local": [
-                {
-                    "autor": "Lautaro Martínez",
-                    "minuto": 28,
+                {}
+            ],
+            "visitante": [{
+                "autor": "Lautaro Martínez",
+                    "minuto": "28",
                     "asistencia": "Lionel Messi",
                     "situacion": "Jugada"
                 },{
                     "autor": "Ángel Di María",
-                    "minuto": 46,
+                    "minuto": "45+1",
                     "asistencia": "Lautaro Martínez",
                     "situacion": "Jugada"
                 },{
                     "autor": "Paulo Dybala",
-                    "minuto": 94,
+                    "minuto": "90+4",
                     "asistencia": "Lionel Messi",
                     "situacion": "Jugada"
-                }
-            ],
-            "visitante": [{}]
+            }]
         },
         "video": "18PZxQqhhBGPQBd-etV-mzqJzhIR2_qss"
     },
@@ -248,7 +248,7 @@
             "local": [
                 {
                     "autor": "Lionel Messi",
-                    "minuto": 10,
+                    "minuto": "10",
                     "asistencia": "",
                     "situacion": "Penal"
                 }
@@ -256,12 +256,12 @@
             "visitante": [
                 {
                     "autor": "Saleh Al-Shehri",
-                    "minuto": 48,
+                    "minuto": "48",
                     "asistencia": "Firas Al-Buraikan",
                     "situacion": "Jugada"
                 },{
                     "autor": "Salem Al-Dawsari",
-                    "minuto": 53,
+                    "minuto": "53",
                     "asistencia": "",
                     "situacion": "Jugada"
                 }
@@ -282,12 +282,12 @@
             "local": [
                 {
                     "autor": "Lionel Messi",
-                    "minuto": 64,
+                    "minuto": "64",
                     "asistencia": "Ángel Di María",
                     "situacion": "Jugada"
                 },{
                     "autor": "Enzo Fernández",
-                    "minuto": 87,
+                    "minuto": "87",
                     "asistencia": "Lionel Messi",
                     "situacion": "Jugada"
                 }
@@ -310,12 +310,12 @@
             "visitante": [
                 {
                     "autor": "Alexis Mac Allister",
-                    "minuto": 46,
+                    "minuto": "46",
                     "asistencia": "Nahuel Molina",
                     "situacion": "Jugada"
                 },{
                     "autor": "Julián Álvarez",
-                    "minuto": 67,
+                    "minuto": "67",
                     "asistencia": "Enzo Fernández",
                     "situacion": "Jugada"
                 }
@@ -336,12 +336,12 @@
             "local": [
                 {
                     "autor": "Lionel Messi",
-                    "minuto": 35,
+                    "minuto": "35",
                     "asistencia": "Nicolás Otamendi",
                     "situacion": "Jugada"
                 },{
                     "autor": "Julián Álvarez",
-                    "minuto": 57,
+                    "minuto": "57",
                     "asistencia": "",
                     "situacion": "Jugada"
                 }
@@ -349,7 +349,7 @@
             "visitante": [
                 {
                     "autor": "Enzo Fernández(EC)",
-                    "minuto": 77,
+                    "minuto": "77",
                     "asistencia": "",
                     "situacion": "Jugada"
                 }
@@ -370,25 +370,25 @@
             "local": [
                 {
                     "autor": "Wout Weghorst",
-                    "minuto": 83,
+                    "minuto": "83",
                     "asistencia": "Steven Berghuis",
                     "situacion": "Jugada"
                 },{
                     "autor": "Wout Weghorst",
-                    "minuto": 101,
-                    "asistencia": "",
+                    "minuto": "90+11",
+                    "asistencia": "Teun Koopmeiners",
                     "situacion": "Jugada"
                 }
             ],
             "visitante": [
                 {
                     "autor": "Nahuel Molina",
-                    "minuto": 35,
+                    "minuto": "35",
                     "asistencia": "Lionel Messi",
                     "situacion": "Jugada"
                 },{
                     "autor": "Lionel Messi",
-                    "minuto": 73,
+                    "minuto": "73",
                     "asistencia": "",
                     "situacion": "Penal"
                 }
@@ -409,17 +409,17 @@
             "local": [
                 {
                     "autor": "Lionel Messi",
-                    "minuto": 34,
+                    "minuto": "34",
                     "asistencia": "",
                     "situacion": "Penal"
                 },{
                     "autor": "Julián Álvarez",
-                    "minuto": 39,
+                    "minuto": "39",
                     "asistencia": "",
                     "situacion": "Jugada"
                 },{
                     "autor": "Julián Álvarez",
-                    "minuto": 69,
+                    "minuto": "69",
                     "asistencia": "Lionel Messi",
                     "situacion": "Jugada"
                 }
@@ -441,17 +441,17 @@
             "local": [
                 {
                     "autor": "Lionel Messi",
-                    "minuto": 23,
+                    "minuto": "23",
                     "asistencia": "",
                     "situacion": "Penal"
                 },{
                     "autor": "Ángel Di María",
-                    "minuto": 36,
+                    "minuto": "36",
                     "asistencia": "Alexis Mac Allister",
                     "situacion": "Jugada"
                 },{
                     "autor": "Lionel Messi",
-                    "minuto": 108,
+                    "minuto": "108",
                     "asistencia": "",
                     "situacion": "Jugada"
                 }
@@ -459,17 +459,17 @@
             "visitante": [
                 {
                     "autor": "Kylian Mbappé",
-                    "minuto": 80,
+                    "minuto": "80",
                     "asistencia": "",
                     "situacion": "Penal"
                 },{
                     "autor": "Kylian Mbappé",
-                    "minuto": 81,
+                    "minuto": "81",
                     "asistencia": "Marcus Thuram",
                     "situacion": "Jugada"
                 },{
                     "autor": "Kylian Mbappé",
-                    "minuto": 118,
+                    "minuto": "118",
                     "asistencia": "",
                     "situacion": "Penal"
                 }

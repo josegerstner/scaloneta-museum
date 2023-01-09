@@ -36,7 +36,7 @@ function Titulos() {
     //   setCompeticiones(data.results)
     // }
     // fetchData()
-    console.log(competiciones)
+    // console.log(competiciones)
   },[])
 
   return (

@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import torneosJSON from '../utils/torneos.json'
-import partidosJSON from '../utils/matches.json'
+import { API_URL } from '../config'
 import flagsJSON from '../utils/flags.json'
-import { getCode, getFormation } from '../utils/extraFunctions.js'
+import { fetchData, getCode, getFormation } from '../utils/extraFunctions.js'
 
 
 function Partido({partidoid, torneoid}) {
-    const partidos = partidosJSON
-    const torneos = torneosJSON
     const [ id, setId ] = useState(0)
-    const [ isLoading, setIsLoading ] = useState(true)
     const [ torneo, setTorneo ] = useState({})
     const [ partido, setPartido ] = useState({})
-    const [ isLocal, setIsLocal ] = useState(true)
+    const [ goles, setGoles ] = useState([])
+    const [ penales, setPenales ] = useState([])
     const [ vsCode, setVsCode ] = useState('ar')
-    const [ formation, setFormation ] = useState('')
+    const [ formation, setFormation ] = useState('cancha')
+    const [ isLocal, setIsLocal ] = useState(true)
+    const [ isLoading, setIsLoading ] = useState(true)
     const videoURL = 'https://drive.google.com/file/d/'
     const pelota = '⚽'
     const convierte = '✔️'
@@ -25,21 +24,29 @@ function Partido({partidoid, torneoid}) {
         const path = '/partido/'
         const url = window.location.pathname
         setId(url.substring(url.indexOf(path)+(path.length)))
-    },[partidos])
+    },[])
 
     useEffect(()=>{
-        setPartido(partidos?.filter(p=>p.id==id)[0])
+        if(id!==0) {
+            fetchData(`${API_URL}partidos/${id}`, setPartido)
+            fetchData(`${API_URL}partidos/${id}/goles`, setGoles)
+            fetchData(`${API_URL}partidos/${id}/penales`, setPenales)
+        }
     },[id])
 
     useEffect(()=>{
-        setTorneo(torneos?.filter(t=>t.id==partido?.torneo_id)[0])
-        setIsLocal(partido?.localia=='L'?true:false)
-        setVsCode(getCode(partido?.vs, flagsJSON))
-        setFormation(getFormation(partido))
-        setIsLoading(false)
-    },[torneos,partido])
+        if(partido) {
+            fetchData(`${API_URL}torneos/${partido.torneo_id}`, setTorneo)
+            setIsLocal(partido?.localia=='L'?true:false)
+            setVsCode(getCode(partido?.vs, flagsJSON))
+            setFormation(getFormation(partido))
+            setIsLoading(false)
+        }
+    },[partido])
 
-    // console.log('LINK', getFormation(partido));
+
+    console.log('goles', goles);
+    console.log('penales', penales);
 
     return (
         <div className="container">
@@ -48,10 +55,10 @@ function Partido({partidoid, torneoid}) {
                 <div className="row g-0">
                     {torneo?
                     <div className="col-sm-12 col-md-4 text-center">
-                        <Link to={`/titulo/`+torneo.id}>
+                        <Link to={`/torneos/`+torneo.id}>
                             <img 
                                 src={torneo.imagen} 
-                                className="img-fluid rounded-start torneo-img p-3" 
+                                className="img-fluid rounded torneo-img p-3" 
                                 alt={torneo.nombre} />
                         </Link>
                         <img
@@ -61,9 +68,9 @@ function Partido({partidoid, torneoid}) {
                     </div>
                     :''}
                 
-                    <div className="col-sm-12 col-md-8">
+                    <div className="col-12 col-md-8">
                         <h5 className="mb-1 text-center">{partido?.instancia} - {partido?.fecha}</h5>
-                        <h5 className="mb-1 text-center">
+                        <h5 className="m-3 text-center txt-trofeo">
                             {<img
                                 src={`https://flagcdn.com/24x18/${isLocal?'ar':vsCode}.png`}
                                 srcSet={`https://flagcdn.com/48x36/${isLocal?'ar':vsCode}.png 2x,
@@ -85,24 +92,27 @@ function Partido({partidoid, torneoid}) {
                             }
                         </h5>
                         <div className="container row text-center mx-auto">
-
-                            <div className="row"><p className="text-center">Goles</p></div>
-                            <div className="col-12 col-md-6">
-                            {partido?.goles?.local? 
-                                partido.goles.local.map(gol=>{
+                            <div className="col-12">
+                            {goles?
+                                goles.map(gol=>{
                                     return(
                                     <div key={(gol.autor?gol.autor:'')+(gol.minuto?gol.minuto:'')} 
-                                        className="text-start txt-goles">{gol.autor? pelota:''} {gol.autor} {gol.minuto?gol.minuto+`'`:''}
+                                        className={`text-${gol.localia=='L'?'start':'end'} txt-goles`}>
+                                            {gol.localia=='L'? pelota:''} {gol.autor} {gol.minuto?gol.minuto+`'`:''} {gol.situacion?`(${gol.situacion})`:''} {gol.localia=='V'? pelota:''}
                                     </div>)
                                 })
                             :''}
                             </div>
-                            <div className="col-12 col-md-6">
-                            {partido?.goles?.visitante? 
-                                partido.goles.visitante.map(gol=>{
+                            <div className="col-12">
+                            {penales?
+                                <h3 className='mt-5'>Tanda de penales</h3>
+                            :''}
+                            {penales?
+                                penales?.map(penal=>{
                                     return(
-                                    <div key={(gol.autor?gol.autor:'')+(gol.minuto?gol.minuto:'')} 
-                                        className="text-end txt-goles">{gol.autor} {gol.minuto?gol.minuto+`'`:''} {gol.autor? pelota:''}
+                                    <div key={(penal.autor?penal.autor:'')} 
+                                        className={`text-${penal.localia=='L'?'start':'end'} txt-goles`}>
+                                            {penal.localia=='L'? penal.convierte?convierte:pifia:''} {penal.autor} {penal.localia=='V'? penal.convierte?convierte:pifia:''}
                                     </div>)
                                 })
                             :''}

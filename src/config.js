@@ -1,0 +1,1 @@
+export const API_URL = 'https://scaloneta-museum-back-production.up.railway.app/api/'

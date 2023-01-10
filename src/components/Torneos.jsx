@@ -1,44 +1,54 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import partidosJSON from '../utils/matches.json'
-import torneosJSON from '../utils/torneos.json'
+import { API_URL } from '../config';
+import { fetchData } from '../utils/extraFunctions';
 
 function Torneos() {
-    const partidos = partidosJSON
-    const torneos = torneosJSON
     const [ id, setId ] = useState(0)
+    const [ torneo, setTorneo ] = useState({})
+    const [ partidos, setPartidos ] = useState([])
     const [ isLoading, setIsLoading ] = useState(false)
-    const [ currentTorneo, setCurrentTorneo ] = useState({})
-
+    
+    
     useEffect(()=>{
-        const path = '/titulo/'
+        const path = '/torneos/'
         const url = window.location.pathname
-        // console.log(partidos);
-        // console.log(url.substring(url.indexOf(path)+(path.length)))
         setId(url.substring(url.indexOf(path)+(path.length)))
-        // console.log(id);
-    },[partidos])
+    },[])
+    
+    useEffect(()=>{
+        if(id!==0){
+            fetchData(`${API_URL}torneos/${id}`, setTorneo)
+        }
+    },[id])
 
     useEffect(()=>{
-        setCurrentTorneo(torneos.filter(t=>t.id==id)[0])
-        // console.log('torneo',currentTorneo)
-    },[id])
+        if(id!==0){
+            fetchData(`${API_URL}torneos/${id}/partidos`, setPartidos)
+            setIsLoading(false)
+        }
+    },[torneo])
 
     return (
         <div className="container">
             {isLoading?<div>CARGANDO</div>:
             <div className='txt-trofeo text-center mb-3'>
                 <div className="row g-0">
-                    {currentTorneo?
+                    {torneo?
                     <div className="col-md-4">
-                        <Link to={`/titulo/`+currentTorneo.id}><img src={currentTorneo.imagen} className="img-fluid rounded-start torneo-img p-3" alt={currentTorneo.nombre} /></Link>
+                        <Link to={`/torneos/`+torneo.id}>
+                            <img
+                                src={torneo.imagen}
+                                className="img-fluid rounded torneo-img p-3"
+                                alt={torneo.nombre} />
+                        </Link>
                     </div>
                     :''}
                 
                     <div className="col-md-8">
-                        <div className="card-body">
+                        <div className="card-body my-3 mx-0 my-md-0 mx-md-3">
                             <ul className="list-group">
-                            { partidos? partidos.filter(p=>p.torneo_id==id).map(
+                            { partidos? partidos.map(
                                 partido => {
                                     return (
                                         <Link to={`/partido/`+partido.id} className="list-group-item" aria-current="true" key={partido.id} torneoid={partido.torneo_id} partidoid={partido.id} >

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { API_URL } from '../config';
 import { fetchData } from '../utils/extraFunctions';
+import torneosJSON from '../utils/tournaments.json'
+import partidosJSON from '../utils/matches.json'
 
 function Torneos() {
     const [ id, setId ] = useState(0)
@@ -18,25 +20,40 @@ function Torneos() {
     
     useEffect(()=>{
         if(id!==0){
-            fetchData(`${API_URL}torneos/${id}`, setTorneo)
+            fetchData(`${API_URL}torneos/${id}`, setTorneo, torneosJSON)
         }
     },[id])
 
     useEffect(()=>{
         if(id!==0){
-            fetchData(`${API_URL}torneos/${id}/partidos`, setPartidos)
-            setIsLoading(false)
+            if(!Array.isArray(torneo)){
+                fetchData(`${API_URL}torneos/${id}/partidos`, setPartidos, partidosJSON)
+                setIsLoading(false)
+            } else {
+                setTorneo(torneo.find(t => t.id == id))
+            }
         }
     },[torneo])
 
+    useEffect(()=>{
+        // hago esto por me bajan la bbdd
+        if(partidos.length>8){
+            setPartidos(partidos.filter(p => p.torneo_id == id))
+        }
+    },[partidos])
+
+    console.log('id', id);
+    console.log('torneo', torneo)
+    console.log('isArray', Array.isArray(torneo))
+
     return (
         <div className="container">
-            {isLoading?<div>CARGANDO</div>:
+            {isLoading?<div>CARGANDO...</div>:
             <div className='txt-trofeo text-center mb-3'>
                 <div className="row g-0">
                     {torneo?
                     <div className="col-md-4">
-                        <Link to={`/torneos/`+torneo.id}>
+                        <Link to={`/torneos/`+id}>
                             <img
                                 src={torneo.imagen}
                                 className="img-fluid rounded torneo-img p-3"

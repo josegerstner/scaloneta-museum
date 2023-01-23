@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { API_URL } from '../config'
-import flagsJSON from '../utils/flags.json'
 import { fetchData, getCode, getFormation } from '../utils/extraFunctions.js'
+import flagsJSON from '../utils/flags.json'
+import torneosJSON from '../utils/tournaments.json'
+import partidosJSON from '../utils/matches.json'
+import golesJSON from '../utils/goals.json'
+import penalesJSON from '../utils/penalties.json'
 
 
 function Partido({partidoid, torneoid}) {
@@ -28,22 +32,31 @@ function Partido({partidoid, torneoid}) {
 
     useEffect(()=>{
         if(id!==0) {
-            fetchData(`${API_URL}partidos/${id}`, setPartido)
-            fetchData(`${API_URL}partidos/${id}/goles`, setGoles)
-            fetchData(`${API_URL}partidos/${id}/penales`, setPenales)
+            fetchData(`${API_URL}partidos/${id}`, setPartido, partidosJSON)
+            fetchData(`${API_URL}partidos/${id}/goles`, setGoles, golesJSON)
+            fetchData(`${API_URL}partidos/${id}/penales`, setPenales, penalesJSON)
         }
     },[id])
 
     useEffect(()=>{
         if(partido) {
-            fetchData(`${API_URL}torneos/${partido.torneo_id}`, setTorneo)
-            setIsLocal(partido?.localia=='L'?true:false)
-            setVsCode(getCode(partido?.vs, flagsJSON))
-            setFormation(getFormation(partido))
-            setIsLoading(false)
+            if(!Array.isArray(partido)){
+                fetchData(`${API_URL}torneos/${partido.torneo_id}`, setTorneo, torneosJSON)
+                setIsLocal(partido?.localia=='L'?true:false)
+                setVsCode(getCode(partido?.vs, flagsJSON))
+                setFormation(getFormation(partido))
+                setIsLoading(false)
+            } else {
+                // hago esto por me bajan la bbdd
+                setPartido(partido.find(p => p.id == id))
+            }
         }
     },[partido])
 
+    useEffect(() => {
+        // hago esto por me bajan la bbdd
+        Array.isArray(torneo)? setTorneo(torneo.find(t => t.id == partido.torneo_id)):''
+    }, [torneo])
 
     console.log('goles', goles);
     console.log('penales', penales);
@@ -94,7 +107,7 @@ function Partido({partidoid, torneoid}) {
                         <div className="container row text-center mx-auto">
                             <div className="col-12">
                             {goles?
-                                goles.map(gol=>{
+                                goles.filter(gol=>gol.partido_id==id).map(gol=>{
                                     return(
                                     <div key={(gol.autor?gol.autor:'')+(gol.minuto?gol.minuto:'')} 
                                         className={`text-${gol.localia=='L'?'start':'end'} txt-goles`}>
@@ -104,11 +117,11 @@ function Partido({partidoid, torneoid}) {
                             :''}
                             </div>
                             <div className="col-12">
-                            {penales?
+                            {penales.some(p=>p.partido_id==partido.id)?
                                 <h3 className='mt-5'>Tanda de penales</h3>
                             :''}
-                            {penales?
-                                penales?.map(penal=>{
+                            {penales.some(p=>p.partido_id==partido.id)?
+                                penales?.filter(penal => penal.partido_id == id).map(penal=>{
                                     return(
                                     <div key={(penal.autor?penal.autor:'')} 
                                         className={`text-${penal.localia=='L'?'start':'end'} txt-goles`}>

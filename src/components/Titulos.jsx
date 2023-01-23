@@ -1,23 +1,20 @@
 import { useEffect, useState } from 'react'
 import { API_URL } from '../config.js'
 import Titulo from './Titulo.jsx'
+import torneosJSON from '../utils/tournaments.json'
+import { fetchData } from '../utils/extraFunctions.js'
 
 
 function Titulos() {
   const [ titulos, setTitulos ] = useState([])
   const [ isLoading, setIsLoading ] = useState(true)
-
-  async function fetchTitulos() {
-      const response = await fetch(`${API_URL}torneos`)
-      const data = await response.json()
-      setTitulos(data)
-      setIsLoading(false)
-  }
-
+    
   useEffect(()=>{
-    fetchTitulos()
+    fetchData(`${API_URL}titulos`, setTitulos, torneosJSON)
+    setIsLoading(false)
   },[])
 
+  console.log('torneos', titulos);
   return (
     <article className="container">
       {isLoading?

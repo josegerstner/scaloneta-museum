@@ -1,13 +1,14 @@
 // recibe una url y una función a la cual 
-export async function fetchData(url, setData) {
-    const response = await fetch(url)
-    console.log('response', response);
-    if(response.status==200){
-        const data = await response.json()
-        setData(data)
-    } else {
-        setData(null)
-    }
+export function fetchData(url, setData, jsonFile) {
+    const response = fetch(url)
+    .then(data => setData(data))
+    .catch(e => {
+        // hago esto por me bajan la bbdd
+        setData(jsonFile)
+        // console.log(e)
+        console.log("Error al recibir data de la url, se procede a cargar desde el json")
+    })
+    // console.log('response', response);
 }
 
 // Obtiene el código de bandera del país pasado dentro del array pasado
@@ -31,4 +32,4 @@ export const getFormation = (partido) => {
 // Reemplaza las letras con tilde por letras sin tilde (sí, la ñ también)
 const removeAccents = (str) => {
     return str?.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-} 
+}
